@@ -3,9 +3,6 @@ package biocompassignment;
 
 public class Rule {
 
-    //Rules are the baseline of the system, the lowest class.
-    //Made up of 5 condition bits, and 1 output bits.
-    //These are tested against the data set rules.
     private byte[] rule = new byte[BioCompAssignment.ruleSize];
     private byte[] cond = new byte[BioCompAssignment.conditionSize];
     private byte output;

@@ -6,11 +6,9 @@ public class Population {
     RuleSet[] population;
     private final int ruleSetSize = BioCompAssignment.rulesetSize;
     
-     public Population(int populationSize, boolean initialise){
+     public Population(int populationSize, boolean init){
         population = new RuleSet[populationSize];
-        //Initialise population
-        if(initialise){
-            //Loop and create individuals
+        if(init){
             for (int i=0;i<population.length; i++){
                 RuleSet newRuleSet = new RuleSet(ruleSetSize, true);
                 saveRuleSet(i,newRuleSet);
@@ -28,7 +26,6 @@ public class Population {
      
      public RuleSet getFittest(){
         RuleSet fittest = population[0];
-        //Loop through and find the fittest
         for(int i=0; i<population.length; i++){
             if(fittest.getFitness() <= getRuleSet(i).getFitness()){
                 fittest = getRuleSet(i);

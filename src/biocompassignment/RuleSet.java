@@ -2,21 +2,17 @@
 package biocompassignment;
 
 public class RuleSet {
-    //RuleSet makes up the population for the test. Consists of 10 Rules
 
     Rule[] ruleSet;
     int fitness;
 
-    public RuleSet(int ruleSetSize, boolean initialise) {
+    public RuleSet(int ruleSetSize, boolean init) {
         ruleSet = new Rule[ruleSetSize];
         fitness = 0;
-        //Initialise population
-        if (initialise) {
-            //Loop and create individuals
+        if (init) {
             for (int i = 0; i < ruleSet.length; i++) {
                 Rule newRule = new Rule();
                 newRule.generateRule();
-                //saveRule(i, newRule);
                 ruleSet[i] = newRule;
             }
         }
